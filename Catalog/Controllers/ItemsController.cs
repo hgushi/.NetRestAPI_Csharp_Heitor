@@ -39,5 +39,56 @@ namespace Catalog.Controllers
 
             return item.AsDto();
         }
+
+        //Apos a criação de items
+        [HttpPost]
+        public ActionResult<ItemDto> CreateItem(CreateItemDto itemDto)
+        {
+            Item item = new(){
+                Id = Guid.NewGuid(),
+                Name = itemDto.Name,
+                Price = itemDto.Price,
+                CreatedDate = DateTimeOffset.UtcNow
+            };
+
+            repository.CreateItem(item);
+
+            return CreatedAtAction(nameof(GetItem), new { id = item.Id}, item.AsDto() );
+        }
+        // Put items{id} -> Update de um item sobre seu id, podendo trocar os parametros de Name e Price
+        [HttpPut("{id}")]
+        public ActionResult UpdateItem(Guid id, UpdateItemDto itemDto)
+        {
+            var existingItem = repository.GetItem(id);
+
+            if(existingItem is null)
+            {
+                return NotFound();
+            }
+            //Criação de cópia dando um update em atributos pré-existentes
+            Item updatedItem = existingItem with
+            {
+                Name = itemDto.Name,
+                Price = itemDto.Price
+            };
+
+            repository.UpdateItem(updatedItem);
+
+            return NoContent();
+        }
+        // Deletar o item com base no Id
+        [HttpDelete("{id}")]
+        public ActionResult DeleteItem(Guid id)
+        {
+           var existingItem = repository.GetItem(id);
+
+           if(existingItem is null)
+           {
+               return NotFound();
+           }
+
+           repository.DeleteItem(id);
+           return NoContent();     
+        }
     }
 }
