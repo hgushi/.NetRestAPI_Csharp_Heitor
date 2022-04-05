@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hgush\\Desktop\\Usp\\RestAPI\\.NetRestAPI_Csharp_Heitor\\Catalago\\Catalago.csproj": {}
+    "D:\\UspGameJam\\CatalogAPI\\Catalago\\Catalago.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hgush\\Desktop\\Usp\\RestAPI\\.NetRestAPI_Csharp_Heitor\\Catalago\\Catalago.csproj": {
+    "D:\\UspGameJam\\CatalogAPI\\Catalago\\Catalago.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hgush\\Desktop\\Usp\\RestAPI\\.NetRestAPI_Csharp_Heitor\\Catalago\\Catalago.csproj",
+        "projectUniqueName": "D:\\UspGameJam\\CatalogAPI\\Catalago\\Catalago.csproj",
         "projectName": "Catalago",
-        "projectPath": "C:\\Users\\hgush\\Desktop\\Usp\\RestAPI\\.NetRestAPI_Csharp_Heitor\\Catalago\\Catalago.csproj",
-        "packagesPath": "C:\\Users\\hgush\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hgush\\Desktop\\Usp\\RestAPI\\.NetRestAPI_Csharp_Heitor\\Catalago\\obj\\",
+        "projectPath": "D:\\UspGameJam\\CatalogAPI\\Catalago\\Catalago.csproj",
+        "packagesPath": "C:\\Users\\hgush_42ergg1\\.nuget\\packages\\",
+        "outputPath": "D:\\UspGameJam\\CatalogAPI\\Catalago\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hgush\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\hgush_42ergg1\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
